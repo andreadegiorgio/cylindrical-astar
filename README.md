@@ -30,3 +30,4 @@ ol: change orientation LEFT;
 oor: change orientation RIGHT;
 gh: go to home position with A*;
 ghd: go to home position with diagonal-A* (moving diagonally too).
+
