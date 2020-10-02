@@ -1,48 +1,81 @@
 # cylindrical-astar
 
-Please cite this work:
-A. de Giorgio and L. Wang, "Artificial Intelligence Control in 4D Cylindrical Space for Industrial Robotic Applications," in IEEE Access, vol. 8, pp. 174833-174844, 2020, doi: 10.1109/ACCESS.2020.3026193.
+###### Please cite this work:
+A. de Giorgio and L. Wang, "Artificial Intelligence Control in 4D Cylindrical Space for Industrial Robotic Applications," in IEEE Access, vol. 8, pp. 174833-174844, 2020, [doi: 10.1109/ACCESS.2020.3026193](https://doi.org/10.1109/ACCESS.2020.3026193).
 
-Instructions
+# Instructions
 
-ABB
+## ABB
 
 Create an ABB IRB 1600 controller in ABB RobotStudio and load "Module1.mod" as a RAPID code module. Run the module.
 
-MATLAB
+## MATLAB
 
-1) Import all the files in the same folder.
-2) Run "a_setup.m".
+1. Import all the files in the same folder.
+2. Run "a_setup.m".
+**Note:** The ABB controller RAPID code must be executed before running "a_setup.m".
 
-Use of the A* control:
+###### Use of the A* control:
 
 - Control the robot with A* using the command "fm". Input each coordinate when requested.
 - Control the robot with diagonal-A* using the command "fmd". Input each coordinate when requested. This allows the robot TCP to move diagonally and skip adjacent cells.
 
-Manual commands:
+###### Manual commands:
+Go up one cell:
+```
+>> gu
+```
+Go down one cell:
+```
+>> gd
+```
+Go one cell towards the human facing the robot:
+```
+>> gc
+```
+Go one cell backwards from the human facing the robot:
+```
+>> gb
+```
+Go left one cell:
 
-gu: go up one cell;
+```
+>> gl
+```
+Go right one cell:
+```
+>> gr
+```
+Change orientation UP:
+```
+>> ou
+```
+Change orientation DOWN:
+```
+>> od
+```
+Change orientation CENTER:
+```
+>> oc
+```
+Change orientation LEFT:
+```
+>> ol
+```
+Change orientation RIGHT:
+```
+>> oor
+```
+Go to home position with A*:
+```
+>> gh
+```
+Go to home position with diagonal-A* (moving diagonally too):
+```
+>> ghd
+```
 
-gd: do down one cell;
-
-gc: go one cell towards the human facing the robot;
-
-gb: go one cell backwards from the human facing the robot;
-
-gl: go left one cell;
-
-gr: go right one cell;
-
-ou: change orientation UP;
-
-od: change orientation DOWN;
-
-oc: change orientation CENTER;
-
-ol: change orientation LEFT;
-
-oor: change orientation RIGHT;
-
-gh: go to home position with A*;
-
-ghd: go to home position with diagonal-A* (moving diagonally too).
+Note that commands can be composed using a semicolon, for example:
+```
+>> gu;gu;gl;gl;gb;gb;gd;gd;gr;gr;gc;gc;
+```
