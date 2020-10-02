@@ -1,6 +1,6 @@
 # cylindrical-astar
 
-###### Please cite this work:
+## Please cite this work:
 A. de Giorgio and L. Wang, **"Artificial Intelligence Control in 4D Cylindrical Space for Industrial Robotic Applications"**, in IEEE Access, vol. 8, pp. 174833-174844, 2020, [doi: 10.1109/ACCESS.2020.3026193](https://doi.org/10.1109/ACCESS.2020.3026193).
 
 # Instructions
@@ -16,7 +16,7 @@ Create an ABB IRB 1600 controller in ABB RobotStudio and load "Module1.mod" as a
 
 **Note:** The ABB controller RAPID code must be executed before running "a_setup.m".
 
-###### Use of the A* control:
+### Use of the A* control:
 
 - Control the robot with A* using the command "fm":
 ```
@@ -29,7 +29,7 @@ Input each coordinate when requested.
 ```
 Input each coordinate when requested. This allows the robot TCP to move diagonally and skip adjacent cells.
 
-###### Manual commands:
+### Manual commands:
 Go up one cell:
 ```
 >> gu
